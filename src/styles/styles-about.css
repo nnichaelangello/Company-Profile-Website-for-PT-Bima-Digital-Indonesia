@@ -1,0 +1,161 @@
+Section Header
+.section-header {
+    position: relative;
+}
+
+
+/* Team Section */
+.team-member {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    will-change: transform, opacity; /* Optimasi performa animasi */
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1); /* Easing yang lebih halus */
+}
+
+.team-member img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 15px;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1); 
+}
+
+.team-member:hover img {
+    transform: scale(1.05); /* Zoom-in yang lebih halus */
+}
+
+.team-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(30, 58, 138, 0.85);
+    display: flex;
+    flex-direction: column; /* Perbaikan: Ganti flex-col menjadi flex-direction: column */
+    align-items: center; /* Perbaikan: Ganti items-center menjadi align-items: center */
+    justify-content: center; /* Perbaikan: Ganti justify-center menjadi justify-content: center */
+    opacity: 0;
+    /* transform: translateY(20px); */
+    transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1), transform 0.6s cubic-bezier(0.4, 0, 0.2, 1); /* Transisi yang sinkron */
+}
+
+.team-member:hover .team-overlay {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.team-overlay h4 {
+    color: white;
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.team-overlay p {
+    color: #D4AF37;
+    font-size: 0.875rem;
+    margin-bottom: 0.5rem;
+}
+
+.team-overlay p:last-child {
+    color: white;
+    font-size: 0.875rem;
+    text-align: center;
+    padding: 0 1rem;
+}
+
+/* Client Logos */
+.client-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80px;
+    width: 150px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease-in-out;
+}
+
+.client-logo:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.client-logo img {
+    height: 2.5rem;
+    width: auto;
+    object-fit: contain;
+    transition: filter 0.3s ease-in-out;
+}
+
+.client-logo.grayscale img {
+    filter: grayscale(100%);
+}
+
+.client-logo:hover.grayscale img {
+    filter: grayscale(0);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes teamCard {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes clientLogo {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.animate-fadeIn {
+    animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+.animate-teamCard {
+    animation: teamCard 0.6s ease-in-out forwards;
+}
+
+.animate-clientLogo {
+    animation: clientLogo 0.5s ease-in-out forwards;
+}
+
+/* Consistent Spacing */
+.mission-vision-values,
+.achievements-section,
+.team-section,
+.clients-section,
+.testimonials-section {
+    margin-bottom: 80px;
+}
+
+/* Ensure consistent image styling */
+.history-image img,
+.team-member img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+}

@@ -1,0 +1,75 @@
+/* Reset Default Styles - Disesuaikan dengan Tailwind, sebagian diabaikan karena Tailwind menangani reset */
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+/* Header Button (Hamburger) - Sudah dikelola di BlogClient.js dengan Tailwind */
+header .container button {
+    display: none;
+}
+
+/* Section Header Pseudo-Element - Disesuaikan agar kompatibel dengan Tailwind */
+.section-header {
+    position: relative;
+}
+
+
+/* Blog List Section - Grid dikelola oleh Tailwind, gap disesuaikan */
+
+.blog-wrapper {
+    display: flex;
+}
+
+/* Blog Post Image Hover Effect */
+.blog-post:hover .blog-image img {
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out; /* Ditambahkan untuk konsistensi */
+}
+
+/* Blog Content Read More Arrow */
+/* .blog-content .read-more::after {
+    content: '\f061';
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    margin-left: 8px;
+    font-size: 12px;
+} */
+
+/* Sidebar Section Headers */
+.trending-section h4::after,
+.categories-section h4::after {
+    content: '';
+    width: 40px;
+    height: 2px;
+    background: #D4AF37;
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+}
+
+/* Pagination Button - Disesuaikan dengan Tailwind */
+.page-btn {
+    background: #fff;
+    border: 2px solid #D4AF37;
+    color: #D4AF37;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+    margin: 0 5px; /* Tambahkan margin untuk mencegah tumpang tindih */
+}
+
+.page-btn:hover {
+    background: #D4AF37;
+    color: #fff;
+    box-shadow: 0 4px 12px rgba(212, 175, 55, 0.4); /* Ganti scale dengan shadow untuk efek lebih profesional */
+}
+
+.page-btn.active {
+    background: #D4AF37;
+    color: #fff;
+    box-shadow: 0 4px 12px rgba(212, 175, 55, 0.4); /* Efek sama seperti hover untuk konsistensi */
+}

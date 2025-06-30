@@ -1,0 +1,128 @@
+/* Reset Default Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* General Styles */
+body {
+  line-height: 1.6;
+}
+
+/* Header Navigation */
+header nav ul {
+  gap: 30px;
+}
+
+/* Services Section */
+.services-section {
+  height: 107vh;
+}
+
+.services-section .services-cards {
+  position: relative;
+}
+
+.services-section .service-card {
+  position: absolute;
+  height: 20rem;
+  width: 15rem;
+}
+
+.services-section .service-card1 {
+  margin-top: 4rem;
+}
+
+.services-section .service-card2 {
+  margin-left: 17rem;
+}
+
+.services-section .service-card3 {
+  margin-top: 25rem;
+}
+
+.services-section .service-card4 {
+  margin-left: 17rem;
+  margin-top: 21rem;
+}
+
+.services-section .section-header {
+  margin-top: 15rem;
+  margin-left: 40rem;
+  text-align: start;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-delay-500 {
+  animation-delay: 0.5s;
+}
+
+.animate-delay-1000 {
+  animation-delay: 1s;
+}
+
+/* FAQ Section */
+.faq-item {
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.faq-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.faq-item.open {
+  background-color: #f9fafb;
+}
+
+/* Hamburger Menu */
+.hamburger {
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: block !important;
+  }
+
+  header nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+  }
+
+  header nav.active {
+    display: block;
+  }
+
+  header nav ul {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  header nav ul li {
+    text-align: center;
+  }
+}

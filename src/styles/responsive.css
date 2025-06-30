@@ -1,0 +1,690 @@
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 30px;
+}
+
+.blog-image {
+    padding-bottom: 80%;
+}
+
+.portfolio-reverse {
+    flex-direction: row-reverse;
+}
+
+@media screen and (max-width: 1440px) {
+    .services-section{
+        height: 99vh;
+    }
+    .blog-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 30px;
+}
+}
+
+@media screen and (max-width: 1080px) {
+    .blog-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    .blog-image {
+        padding-bottom: 60%;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    header div nav ul{
+        gap: 20px;
+    }
+    .services-section{
+        height: 99vh;
+    }
+    .services-section .container {
+        margin-left: 0;
+    }
+}
+
+@media screen and (max-width: 860px){
+    .services-section{
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        height: auto;
+        padding-left: 20px;
+        padding-right: 20px;
+        
+    }   
+    .services-section .services-cards{
+        position: relative;
+        margin: 0;
+        display: flex;
+        gap: 30px;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .services-section .service-card1{ 
+        margin: 0;
+        width: 20rem;
+        height: 15rem;
+        position: relative;
+    }
+    .services-section .service-card2{ 
+        margin: 0;
+        width: 20rem;
+        height: 15rem;
+        position: relative;
+    }
+    .services-section .service-card3{ 
+        margin: 0;
+        width: 20rem;
+        height: 15rem;
+        position: relative;
+    }
+    .services-section .service-card4{ 
+        margin: 0;
+        width: 20rem;
+        height: 15rem;
+        position: relative;
+    }
+    .services-section .section-header {
+        margin-top: 0;
+        margin-left: 0;
+        margin-right: 0;
+        margin-bottom: 50px;
+        text-align: center;
+    }
+    .services-section .container{
+        position: relative;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .blog-grid {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+    .blog-image {
+        padding-bottom: 50%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .blog-section .blog-card{
+        width: 40%;
+    }
+    header div nav ul{
+        gap: 20px;
+    }
+    header nav ul li a{
+        font-size: 12px;
+    }
+    .services-section{
+        height: 165vh;
+    }
+    .services-section .section-header {
+        margin-top: 0;
+        margin-left: 0;
+        margin-right: 100px;
+        text-align: center;
+    }
+    .services-section .services-cards{
+        margin-top: 21rem;
+        margin-left: 15%;
+    }
+    .about-section .about-content{
+        display: grid;
+        grid-template-columns: none;
+    }
+    .testimonials-section .testimonials-cards{
+        gap: 1rem;
+    }
+    .services-section{
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        height: auto;
+        padding-left: 20px;
+        padding-right: 20px;
+        
+    }   
+    .services-section .services-cards{
+        position: relative;
+        margin: 0;
+        display: flex;
+        gap: 30px;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .services-section .service-card1{ 
+        margin: 0;
+        width: 20rem;
+        height: 15rem;
+        position: relative;
+    }
+    .services-section .service-card2{ 
+        margin: 0;
+        width: 20rem;
+        height: 15rem;
+        position: relative;
+    }
+    .services-section .service-card3{ 
+        margin: 0;
+        width: 20rem;
+        height: 15rem;
+        position: relative;
+    }
+    .services-section .service-card4{ 
+        margin: 0;
+        width: 20rem;
+        height: 15rem;
+        position: relative;
+    }
+    .services-section .section-header{
+        margin: 0 0 40px 0;
+    }
+    .services-section .container{
+        position: relative;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    header .container button {
+        display: block;
+    }
+  /* Hamburger Menu Icon */
+  header .hamburger {
+    display: block;
+    font-size: 24px;
+    color: #1E3A8A;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    transition: color 0.3s ease;
+  }
+
+  header .hamburger:hover {
+    color: #D4AF37;
+  }
+
+  /* Hide Desktop Nav by Default */
+  header nav {
+    display: none;
+    width: 100%;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #ffffff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    z-index: 999;
+  }
+
+  /* Show Nav When Active */
+  header nav.active {
+    display: block;
+  }
+
+  header nav ul {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  header nav ul li a {
+    font-size: 16px;
+    display: block;
+    padding: 10px 0;
+    color: #2D3748;
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+
+  header nav ul li a:hover,
+  header nav ul li a.active {
+    color: #D4AF37;
+    transform: translateX(5px);
+  }
+
+  /* Auth Section Adjustments */
+  header .auth {
+    gap: 15px;
+    margin-left: 6rem;
+  }
+
+  header .auth .chat-btn {
+    margin-left: 9rem;
+    padding: 8px 15px;
+    font-size: 14px;
+  }
+
+  header .auth .chat-btn:hover {
+    background: #D4AF37;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3);
+  }
+  .services-section .section-header p {
+    max-width: 10000px;
+  }
+      .blog-grid {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+    .blog-section{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .blog-section .blog-post{
+        position: relative;
+        margin: 0;
+        display: flex;
+        gap: 30px;
+        flex-wrap: wrap;
+        flex-direction: column;
+        width: 100%;
+    }
+    .blog-section .blog-card{
+        width: 20rem;
+    }
+    .blog-list-section{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .blog-sidebar {
+        max-width: 100%;
+    }
+}
+
+@media screen and (max-width: 756px) {
+    .blog-section .blog-post{
+        gap: 20px;
+    }
+    /* .blog-section .blog-card{
+        width: 50%;
+    } */
+}
+
+@media screen and (max-width: 600px) {
+    header .container button {
+        display: block;
+    }
+
+  /* Hamburger Menu Icon */
+  header .hamburger {
+    display: block;
+    font-size: 24px;
+    color: #1E3A8A;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    transition: color 0.3s ease;
+  }
+
+  header .hamburger:hover {
+    color: #D4AF37;
+  }
+
+  /* Hide Desktop Nav by Default */
+  header nav {
+    display: none;
+    width: 100%;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #ffffff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    z-index: 999;
+  }
+
+  /* Show Nav When Active */
+  header nav.active {
+    display: block;
+  }
+
+  header nav ul {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  header nav ul li a {
+    font-size: 16px;
+    display: block;
+    padding: 10px 0;
+    color: #2D3748;
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+
+  header nav ul li a:hover,
+  header nav ul li a.active {
+    color: #D4AF37;
+    transform: translateX(5px);
+  }
+
+  /* Auth Section Adjustments */
+  header .auth {
+    gap: 15px;
+    margin-left: 6rem;
+  }
+
+  header .auth .chat-btn {
+    margin-left: 9rem;
+    padding: 8px 15px;
+    font-size: 14px;
+  }
+
+  header .auth .chat-btn:hover {
+    background: #D4AF37;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3);
+  }
+}
+
+@media screen and (max-width: 560px) {
+    .blog-section{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .blog-section .blog-post{
+        position: relative;
+        margin: 0;
+        display: flex;
+        gap: 30px;
+        justify-content: center;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+    }
+    .blog-section .blog-card{
+        width: 20rem;
+    }
+    .blog-list-section{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .blog-wrapper{
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    header .auth .chat-btn {
+        margin-left: 4rem;
+      }
+      .services-section{
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        height: auto;
+        padding-left: 20px;
+        padding-right: 20px;
+        
+    }   
+    .services-section .services-cards{
+        position: relative;
+        margin: 0;
+        display: flex;
+        gap: 30px;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .services-section .service-card1{ 
+        margin: 0;
+        width: 20rem;
+        height: 15rem;
+        position: relative;
+    }
+    .services-section .service-card2{ 
+        margin: 0;
+        width: 20rem;
+        height: 15rem;
+        position: relative;
+    }
+    .services-section .service-card3{ 
+        margin: 0;
+        width: 20rem;
+        height: 15rem;
+        position: relative;
+    }
+    .services-section .service-card4{ 
+        margin: 0;
+        width: 20rem;
+        height: 15rem;
+        position: relative;
+    }
+    .services-section .section-header{
+        margin: 0 0 40px 0;
+    }
+    .services-section .container{
+        position: relative;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .portfolio-timeline::before{
+        display: none;
+    }
+    .portfolio-item{
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 451px) {
+    * {
+        padding: 0;
+        margin: 0;
+    }
+    .container{
+        padding: 0;
+        margin: 0;
+    }
+        header {
+        padding: 15px 0;
+      }
+    
+      header .container {
+        flex-wrap: wrap;
+        position: relative;
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+    
+      header .logo {
+        font-size: 24px;
+      }
+
+      header .container button {
+        display: block;
+    }
+    
+      /* Hamburger Menu Icon */
+      header .hamburger {
+        display: block;
+        font-size: 24px;
+        color: #1E3A8A;
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 5px;
+        transition: color 0.3s ease;
+      }
+    
+      header .hamburger:hover {
+        color: #D4AF37;
+      }
+    
+      /* Hide Desktop Nav by Default */
+      header nav {
+        display: none;
+        width: 100%;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background: #ffffff;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        z-index: 999;
+      }
+    
+      /* Show Nav When Active */
+      header nav.active {
+        display: block;
+      }
+    
+      header nav ul {
+        flex-direction: column;
+        gap: 20px;
+      }
+    
+      header nav ul li a {
+        font-size: 16px;
+        display: block;
+        padding: 10px 0;
+        color: #2D3748;
+        transition: color 0.3s ease, transform 0.3s ease;
+      }
+    
+      header nav ul li a:hover,
+      header nav ul li a.active {
+        color: #D4AF37;
+        transform: translateX(5px);
+      }
+    
+      /* Auth Section Adjustments */
+      header .auth {
+        gap: 15px;
+        margin-left: 6rem;
+      }
+    
+      header .auth .chat-btn {
+        margin-left: auto;
+        padding: 8px 15px;
+        font-size: 14px;
+      }
+    
+      header .auth .chat-btn:hover {
+        background: #D4AF37;
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3);
+      }
+    .hero-section{
+        padding: 0;
+        margin: 0;
+    }
+    .hero-section .hero-content h1{
+        margin: 0;
+        margin-bottom: 40px;
+        font-size: 40px;
+    }
+    .hero-section .hero-content p{
+        margin: 0;
+        margin-bottom: 40px;
+        font-size: 15px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .services-section{
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        height: auto;
+        padding-left: 20px;
+        padding-right: 20px;
+        
+    }   
+    .services-section .services-cards{
+        position: relative;
+        margin: 0;
+        display: flex;
+        gap: 30px;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .services-section .service-card1{ 
+        margin: 0;
+        width: 20rem;
+        height: 15rem;
+        position: relative;
+    }
+    .services-section .service-card2{ 
+        margin: 0;
+        width: 20rem;
+        height: 15rem;
+        position: relative;
+    }
+    .services-section .service-card3{ 
+        margin: 0;
+        width: 20rem;
+        height: 15rem;
+        position: relative;
+    }
+    .services-section .service-card4{ 
+        margin: 0;
+        width: 20rem;
+        height: 15rem;
+        position: relative;
+    }
+    .services-section .section-header{
+        margin: 0 0 40px 0;
+    }
+    .services-section .container{
+        position: relative;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .about-section{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .project-section{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .testimonials-section{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    
+    footer {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .services-list-section{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .portfolio-section{
+        padding-left: 20px;
+        padding-right: 20px; 
+    }
+    .portfolio-timeline::before{
+        display: none;
+    }
+    .portfolio-item{
+        flex-direction: column;
+    }
+    .portfolio-item.reverse{
+        flex-direction: column;
+    }
+    .pricing-section{
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+    .cta-section{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .contact-section{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .contact-section .contact-content{
+        display: flex;
+        flex-direction: column;
+    }
+    .contact-section .contact-form{
+        width: 24rem;
+    }
+    
+}
+
+@media screen and (max-width: 420px) {
+    .contact-section .contact-form {
+        width: 90%;
+    }
+}
